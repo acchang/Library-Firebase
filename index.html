@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tell me your favorite book!</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+<div id="sidebar">
+<div id="pageName">
+    <h1>
+    What's <br>
+    The Best  <br>
+    Book You <br>
+    Ever Read? <br>
+  </h1>
+</div>
+<button id="myBtn">Add your favorite!</button>
+</div>
+
+
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><form>
+      <input class="input" name="title" id="title" type="text" placeholder="Title" maxlength="20" ><br>
+      <input class="input" name="fname" id="fname" type="text" placeholder="Author first name" maxlength="10" ><br>
+      <input class="input" name="lname" id="lname" type="text" placeholder="Author last name" maxlength="10" ><br>
+      <input class="input" name="pubDate" id="pubDate" type="number" placeholder="Publication year" maxlength=4><br>
+      <input class="input" name="contrib" id="contrib" type="text" placeholder="Submitted by" maxlength="20"><br>
+      <label for="read">Do you own it?</label> <input name="own" id="own" type="checkbox"><br>
+      <button class="submitButton">Submit</button>
+    </form>
+    </p>
+  </div>
+</div>
+
+
+<div id="libraryContainer">
+
+<!--   <div class="book-container" >
+    <div class="volume">
+      <img/>
+    </div>
+  </div>
+-->
+
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCtr1lU4XKg4rFZgm_4ax5VyoXerz8lmeA",
+    authDomain: "project-library-7e667.firebaseapp.com",
+    databaseURL: "https://project-library-7e667.firebaseio.com",
+    projectId: "project-library-7e667",
+    storageBucket: "project-library-7e667.appspot.com",
+    messagingSenderId: "394842140770",
+    appId: "1:394842140770:web:036e0ef0d406447928a13b",
+    measurementId: "G-NSZNCJ0ZN3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,174 @@
+#sidebar {
+  float: left;
+  padding-right: 35px;
+  }
+
+#pageName {
+  font-family: "Bookman Old Style", sans-serif;
+  }
+
+#libraryContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.input { 
+  font-size: 12pt;
+  height: 24px; 
+  width : 250px; 
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  font-size: 14pt;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+/* .volume {
+  width: 190px;
+  height: 225px;
+  background: brown;
+  color: #ef8a42; 
+  padding: 15px;
+  border: 5px;
+  margin: 20px;
+  font-family: "Bookman Old Style", sans-serif;
+  text-align: center;
+} */
+
+
+/*Book css from https://3d-book-css.netlify.app/ */
+
+.book-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 600px;
+  margin: 20px;
+}
+
+@keyframes initAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-30deg);
+  }
+}
+
+.volume {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-30deg);
+  transition: 1s ease;
+  animation: 1s ease 0s 1 initAnimation;
+  font-family: "Bookman Old Style", sans-serif;
+  color: #ef8a42;
+  text-align: center;
+  margin: 20px;
+}
+
+.volume:hover {
+  transform: rotateY(0deg);
+}
+
+.volume > :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 300px;
+  transform: translateZ(25px);
+  background-color:yellow;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 5px 5px 20px #666;
+}
+
+.volume::before {
+  position: absolute;
+  content: ' ';
+  left: 0;
+  top: 3px;
+  width: 48px;
+  height: 294px;
+  transform: translateX(172px) rotateY(90deg);
+  background: linear-gradient(90deg, 
+    #fff 0%,
+    #f9f9f9 5%,
+    #fff 10%,
+    #f9f9f9 15%,
+    #fff 20%,
+    #f9f9f9 25%,
+    #fff 30%,
+    #f9f9f9 35%,
+    #fff 40%,
+    #f9f9f9 45%,
+    #fff 50%,
+    #f9f9f9 55%,
+    #fff 60%,
+    #f9f9f9 65%,
+    #fff 70%,
+    #f9f9f9 75%,
+    #fff 80%,
+    #f9f9f9 85%,
+    #fff 90%,
+    #f9f9f9 95%,
+    #fff 100%
+    );
+}
+
+.volume::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: ' ';
+  width: 200px;
+  height: 300px;
+  transform: translateZ(-25px);
+  background-color: #01060f;
+  border-radius: 0 2px 2px 0;
+  box-shadow: -10px 0 50px 10px #666;
+}
