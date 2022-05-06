@@ -1,3 +1,12 @@
+This was a project for The Odin Project working on constructors to build a book archive.
+
+You can see the finished product here: 
+https://acchang.github.io/Library-Firebase/
+
+I experimented with CSS to do the book animations.
+
+
+--------------
 The Odin Project: Project Library Directions
 
 If you haven’t already, set up your project with skeleton HTML/CSS and JS files.
